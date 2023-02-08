@@ -13,12 +13,14 @@ namespace SankeAndLadder
             int position = 0;
             int diceRoll;
             int option;
+            int diceRollCount = 0;
             Random random = new Random();
 
             while (position < 100)
             {
                 diceRoll = random.Next(1, 7);
                 Console.WriteLine("You rolled a " + diceRoll);
+                diceRollCount++;
                 option = random.Next(1, 4);
 
                 switch (option)
@@ -53,8 +55,9 @@ namespace SankeAndLadder
             }
 
             Console.WriteLine("You won the game! You are at position 100");
+            Console.WriteLine("Number of times dice was played to win the game: " + diceRollCount);
             Console.ReadLine();
-
         }
     }
 }
+
