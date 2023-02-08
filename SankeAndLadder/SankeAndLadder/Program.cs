@@ -11,10 +11,12 @@ namespace SankeAndLadder
         static void Main(string[] args)
         {
             int position = 0;
-            //int diceRoll;
-            Random random = new Random();
+            int diceRoll;
 
-            Console.WriteLine("starting point"+position);
+            Random random = new Random();
+            diceRoll = random.Next(1, 7);
+
+            Console.WriteLine("starting point{0} and random number{1}:"+position,diceRoll);
         }
     }
 }
